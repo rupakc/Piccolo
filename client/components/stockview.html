@@ -1,0 +1,27 @@
+<template name = "stockview">
+  <br/>
+  <hr/>
+  <div class="ui cards">
+    {{#each responseJsonList}}
+    <div class="green card">
+      <div class="content">
+        <img class="right floated mini ui image" src="images/stocktwits_logo.png">
+        <div class="header">
+          Stocktwit
+        </div>
+        <div class="meta">
+          {{created_at}}
+        </div>
+        <div class="description" style="overflow: hidden;">
+          {{text}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui center aligned segment" style="border: none; box-shadow: none;">
+          <div class="ui basic green button">{{sentiment}}</div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>

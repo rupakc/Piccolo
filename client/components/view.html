@@ -1,0 +1,28 @@
+<template name = "view">
+  <br/>
+  <div class="ui horizontal divider"> <i class="heart icon"> </i> </div>
+  <div class="ui cards">
+    {{#each responseJsonList}}
+      <div class="teal card">
+      <div class="content">
+        <img class="right floated mini ui image" src="images/twitter_icon.png">
+        <div class="header">
+          Twitter
+        </div>
+        <div class="meta">
+          {{created_at}}
+        </div>
+        <div class="description"  style="overflow:hidden">
+          {{text}}
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui two buttons">
+          <div class="ui basic green button">{{sentiment}}</div>
+          <div class="ui basic red button">{{retweet_count}}</div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</template>
